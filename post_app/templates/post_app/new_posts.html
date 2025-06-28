@@ -12,6 +12,17 @@
         {% else %}
             @{{ post.author.user.username}} 
         {% endif %}
+        
+        {% if post.author.signature %}
+        <div class="post-signature">
+            <img src="{{ post.author.signature.url }}" alt="" class="signature-image">
+        </div>
+    {% elif post.author.user.first_name and post.author.user.last_name %}
+        <div class="post-signature">
+            <p class="signature-text">{{ post.author.user.first_name }} {{ post.author.user.last_name }}</p>
+        </div>
+    {% endif %}
+         
         <!-- <form method="dialog"> -->
             {% if type == "posts" %}
             <button class="ellipsis" type="submit" id="heh{{post.pk}}"><img src="{% static 'main_app/images/ellipsis.png' %}" alt="error" class="icon" ></button>
@@ -49,7 +60,6 @@
                 {%  endfor %}
             </div>
         {% endif %}
-         
     </div>
         <div class="reaction">
         

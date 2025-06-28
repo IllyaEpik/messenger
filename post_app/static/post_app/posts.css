@@ -205,3 +205,21 @@ height: 13.9107611548vw;
     font-size: 0.73490813648vw;
     gap: 0.41994750656vw;
 }
+
+.post-signature {
+    margin-left: auto;
+    margin-right: 100px; 
+    text-align: initial;
+}
+.signature-image {
+    max-width: 100px;
+    height: auto;
+    display: block;
+}
+.signature-text {
+    font-style: italic;
+    color: #888;
+    font-size: 0.8em;
+    margin: 0;
+    white-space: nowrap; 
+}
