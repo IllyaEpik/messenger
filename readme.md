@@ -1,10 +1,10 @@
-# Месенджер
+# Messenger
 ![alt text](github_storage/preview.png)
 
-## Блок пояснення з якою метою створювався проєкт та кому буде він корисним
-- Даний проєкт створювався як сучасний веб-месенджер для обміну повідомленнями, створення постів, альбомів та групових чатів.
-- Мета — надати користувачам зручний інструмент для спілкування, обміну ідеями, фотографіями та організації спільнот.
-- Проєкт буде корисний студентам, викладачам, колективам, друзям, а також всім, хто шукає простий спосіб комунікації та обміну контентом у закритих чи відкритих групах.
+## Block explaining the purpose of the project and who it will be useful to
+- This project was created as a modern web messenger for exchanging messages, creating posts, albums and group chats.
+- The goal is to provide users with a convenient tool for communicating, exchanging ideas, photos and organizing communities.
+- The project will be useful to students, teachers, teams, friends, as well as anyone looking for a simple way to communicate and share content in closed or open groups.
 
 ---
 
@@ -12,58 +12,59 @@
 
 ---
 
-## Учасники
+## Participants
 
-- **Ілля Епік** — [GitHub](https://github.com/IllyaEpik/messenger)  
-  Тимлід проєкту: організація командної роботи, розробка архітектури, інтеграція всіх компонентів, контроль якості, фінальне тестування.
+- **Illya Epik** — [GitHub](https://github.com/IllyaEpik/messenger) 
+    Project team leader: organizing teamwork, developing architecture, integrating all components, quality control, final testing.
 
-- **Ренат Белей** — [GitHub](https://github.com/Renat19Belei/messenger)  
-  Відповідальний за верстку: адаптація дизайну під застосунок, стилізація сторінок, забезпечення зручності користування, впровадження інтерактивних елементів на фронтенді, робота з оформленням.
+- **Renat Belei** — [GitHub](https://github.com/Renat19Belei/messenger) 
+    Responsible for layout: adapting the design to the application, styling the pages, ensuring usability, implementing interactive elements on the frontend, working with the design.
 
-- **Марк Попович** — [GitHub](https://github.com/markpopovich9/messenger)  
-  Розробник бекенду: реалізація серверної логіки, налаштування Django, робота з базою даних, впровадження WebSocket для обміну повідомленнями, забезпечення безпеки та стабільності сервісу.
-
----
-
-## Навігація
-- [Інструкція для запуску](#інструкція-для-запуску)
-  - [Інструкція для запуску на локальному хості (через термінал)](#інструкція-для-запуску-на-локальному-хості-через-термінал)
-  - [Інструкція для запуску на локальному хості (через PyCharm або VSCode)](#інструкція-для-запуску-на-локальному-хості-через-pycharm-або-vscode)
-- [Структура проєкту](#структура-проєкту)
-  - [user_app](#структура-user_app)
-  - [post_app](#структура-post_app)
-  - [chat_app](#структура-chat_app)
-  - [main_app](#структура-main_app)
-  - [messenger_dir](#структура-messenger_dir)
-- [Особливості проєкту](#особливості-проєкту)
-  - [Робота з зображеннями](#робота-з-зображеннями)
-  - [Робота з веб-сокетами](#робота-з-веб-сокетами)
-  - [Принцип роботи постів](#принцип-роботи-постів)
-  - [Принцип роботи альбомів](#принцип-роботи-альбомів)
-  - [Принцип роботи чатів](#принцип-роботи-чатів)
-  - [Робота з AJAX](#робота-з-ajax)
-  - [Принцип роботи реєстрації та авторизації](#принцип-роботи-реєстрації-та-авторизації)
-  - [Принцип роботи додатку друзів](#принцип-роботи-додатку-друзів)
-- [Висновок](#висновок)
+- **Mark Popovich** — [GitHub](https://github.com/markpopovich9/messenger) 
+    Backend developer: implementing server logic, configuring Django, working with the database, implementing WebSocket for messaging, ensuring security and stability of the service.
 
 ---
 
-## Інструкція для запуску
+## Navigation
+- [Startup Instructions](#startup-instructions)
+  - [Instructions for running on local host (via terminal)](#instructions-for-running-on-local-host-via-terminal)
+  - [Instructions for running on localhost (via PyCharm or VSCode)]
+  - (#instructions-for-running-on-local-host-via-pycharm-or-vscode)
+- [Project Structure](#project-structure)
+  - [user_app](#structure-user_app)
+  - [post_app](#structure-post_app)
+  - [chat_app](#structure-chat_app)
+  - [main_app](#structure-main_app)
+  - [messenger_dir](#structure-messenger_dir)
+- [Project features](#project features)
+  - [Working with images](#Working-with-images)
+  - [Working with web sockets](#Working-with-websockets)
+  - [The principle of posts](#The-principle-of-posts)
+  - [The principle of work of albums](#The principle of work of albums)
+  - [The principle of operation of chats](#chat-work-principle)
+  - [Working with AJAX](#working-with-ajax)
+  - [How registration and authorization work](#how-registration-and-authorization-work)
+  - [How the Friends App Works](#how-the-friends-app-works)
+- [Conclusion](#conclusion)
 
-[⇧ Повернутися до навігації](#навігація)
+---
 
-### Інструкція для запуску на локальному хості (через термінал)
+## Instructions for running
 
-1. Переконайтесь, що у вас встановлений Python (рекомендовано версію 3.8+).
-2. Завантажте проєкт з Github (через кнопку Code → Download ZIP або через git clone).
+[⇧ Return to navigation](#navigation)
+
+### Instructions for running on localhost (via terminal)
+
+1. Make sure you have Python installed (version 3.8+ recommended).
+2. Download the project from Github (via the Code → Download ZIP button or via git clone).
 ![alt text](github_storage/download.png)
-3. Розархівуйте проєкт у потрібну папку (якщо завантажували ZIP).
-4. Відкрийте термінал (cmd, PowerShell або Terminal).
-5. Перейдіть у папку з проєктом командою:
+3. Unzip the project to the desired folder (if you downloaded the ZIP).
+4. Open a terminal (cmd, PowerShell or Terminal).
+5. Go to the project folder with the command:
    ```
-   cd шлях_до_папки_з_проєктом
+   cd path_to_project_folder
    ```
-6. (Рекомендовано) Створіть та активуйте віртуальне середовище:
+6. (Recommended) Create and activate a virtual environment:
    - Windows:
      ```
      python -m venv venv
@@ -74,47 +75,47 @@
      python3 -m venv venv
      source venv/bin/activate
      ```
-7. Встановіть залежності:
+7. Install dependencies:
    ```
    pip install -r requirements.txt
    ```
-   (або `pip3 install -r requirements.txt` для Mac/Linux)
-8. Виконайте міграції бази даних:
+   (or `pip3 install -r requirements.txt` and Mac/Linux)
+8. Perform database migrations:
    ```
    python manage.py migrate
    ```
-9. Запустіть сервер:
+9. Start the server:
    ```
    python manage.py runserver
    ```
-10. Відкрийте браузер і перейдіть за адресою [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+10. Open a browser and go to the address [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 ---
 
-### Інструкція для запуску на локальному хості (через PyCharm або VSCode)
+### Instructions for running on localhost (via PyCharm or VSCode)
 
-[⇧ Повернутися до навігації](#навігація)
+[⇧ Back to navigation](#navigation)
 
-1. Відкрийте папку з проєктом у PyCharm або VSCode.
-2. Переконайтесь, що у вас встановлений Python (рекомендовано версію 3.8+).
-3. (Рекомендовано) Створіть віртуальне середовище через інтерфейс IDE або термінал.
-4. Встановіть залежності:
+1. Open the project folder in PyCharm or VSCode.
+2. Make sure you have Python installed (version 3.8+ recommended).
+3. (Recommended) Create a virtual environment via the IDE or terminal.
+4. Install dependencies:
    ```
    pip install -r requirements.txt
    ```
-5. Виконайте міграції бази даних:
+5. Perform database migrations:
    ```
    python manage.py migrate
    ```
-6. Запустіть сервер через IDE (Run/Debug) або командою:
+6. Start the server via the IDE (Run/Debug) or with the command:
    ```
    python manage.py runserver
    ```
-7. Відкрийте браузер і перейдіть за адресою [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+7.Open a browser and go to the address [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 ---
 
-## Структура проєкту
+## structure project
 
 [⇧ Повернутися до навігації](#навігація)
 
@@ -133,18 +134,18 @@ graph TD
     Root --> user_app[user_app/]
 ``` 
 
-- [Структура user_app](#структура-user_app)
-- [Структура post_app](#структура-post_app)
-- [Структура chat_app](#структура-chat_app)
-- [Структура main_app](#структура-main_app)
-- [Структура messenger_dir](#структура-messenger_dir)
+- [structure user_app](#structure-user_app)
+- [structure post_app](#structure-post_app)
+- [structure chat_app](#structure-chat_app)
+- [structure main_app](#structure-main_app)
+- [structure messenger_dir](#structure-messenger_dir)
 
 ---
 
-### Структура user_app
+### structure user_app
 [⇧ Повернутися до навігації](#навігація)
 
-> Описує структуру додатку для управління користувачами: реєстрація, авторизація, профіль, шаблони, статика.
+> Describes the structure of a user management application: registration, authorization, profile, templates, statics.
 
 ```mermaid
 graph TD
@@ -166,14 +167,14 @@ graph TD
     static_user --> images[images/]
 ```
 
-user_app — додаток для управління користувачами: реєстрація, авторизація.
+user_app — application for user management: registration, authorization.
 
 ---
 
-### Структура post_app
-[⇧ Повернутися до навігації](#навігація)
+### structure post_app
+[⇧ Return to navigation](#navigation)
 
-> Описує структуру додатку для роботи з постами: створення, перегляд, редагування, видалення постів.
+> Describes the structure of the application for working with posts: creating, viewing, editing, deleting posts.
 
 ```mermaid
 graph TD
@@ -195,14 +196,14 @@ graph TD
     static_post --> images[images/]
 ```
 
-post_app — додаток для управління постами: створення, перегляд, редагування, видалення постів.
+post_app — application for managing posts: creating, viewing, editing, deleting posts.
 
 ---
 
-### Структура chat_app
-[⇧ Повернутися до навігації](#навігація)
+### structure chat_app
+[⇧ Return to navigation](#navigation)
 
-> Описує структуру додатку для чатів: групові чати, особисті повідомлення, шаблони, статика.
+> Describes the structure of a chat application: group chats, private messages, templates, statics.
 
 ```mermaid
 graph TD
@@ -223,14 +224,14 @@ graph TD
     static_chat --> images[images/]
 ```
 
-chat_app — додаток для управління чатами: створення групових чатів, редагування груп, а також особисті повідомлення між користувачами.
+chat_app —chat management application: creating group chats, editing groups, as well as private messages between users.
 
 ---
 
-### Структура main_app
-[⇧ Повернутися до навігації](#навігація)
+### structure main_app
+[⇧ Return to navigation](#navigation)
 
-> Описує структуру головного додатку: загальні сторінки, профіль, редагування даних, аватар, зміна пароля.
+> Describes the structure of the main application: general pages, profile, data editing, avatar, password change.
 
 ```mermaid
 graph TD
@@ -251,14 +252,14 @@ graph TD
     static_main --> images[images/]
 ```
 
-main_app — головний додаток, який містить загальні сторінки: головна сторінка, про нас, контактна інформація, профіль користувача, редагування даних, аватар, зміна пароля тощо.
+main_app — the main application, which contains common pages: home page, about us, contact information, user profile, edit data, avatar, change password, etc.
 
 ---
 
-### Структура messenger_dir
-[⇧ Повернутися до навігації](#навігація)
+### structure messenger_dir
+[⇧ Return to navigation](#navigation)
 
-> Описує структуру основної конфігурації Django-проєкту: налаштування, маршрутизація, запуск серверу.
+> Describes the structure of the basic configuration of a Django project: settings, routing, server startup.
 
 ```mermaid
 graph TD
@@ -270,65 +271,63 @@ graph TD
     messenger_dir --> wsgi[wsgi.py]
 ```
 
-messenger_dir — основна конфігурація Django-проєкту: налаштування, маршрутизація, запуск серверу.
+messenger_dir — basic Django project configuration: settings, routing, server startup.
 
 ---
 
-## Особливості проєкту
+## Project Features
 
-[⇧ Повернутися до навігації](#навігація)
+[⇧ Return to navigation](#navigation)
 
-### Робота з зображеннями
+### Working with images
 
+Our messenger has full support for working with images: users can change their avatar, add photos to posts, and create albums. Images are uploaded via forms with a preview, and all files are stored in a special media directory. For the user's convenience, a thumbnail is displayed immediately after selecting a file. Updating an avatar or adding a photo to a post does not require a page reload — everything works via AJAX.
 
-У нашому месенджері реалізовано повноцінну підтримку роботи з зображеннями: користувачі можуть змінювати аватар, додавати фото до постів, створювати альбоми. Завантаження зображень відбувається через форми з попереднім переглядом (preview), а всі файли зберігаються у спеціальній директорії media. Для зручності користувача одразу після вибору файлу відображається його мініатюра. Оновлення аватара чи додавання фото до посту не потребує перезавантаження сторінки — все працює через AJAX.
-
-**Файл з логікою:**
+**Logic file:**
 `user_app/static/user_app/personal.js`
 
-**Гіф-демонстрація:**  
-![Зміна аватара](github_storage/avatar.gif)
+**Gif demo:** 
+![Avatar change](github_storage/avatar.gif)
 
 ---
 
-### Робота з веб-сокетами
+### Working with WebSockets
 
-[⇧ Повернутися до навігації](#навігація)
+[⇧ Back to navigation](#navigation)
 
-Для забезпечення миттєвого обміну повідомленнями у чатах використовується WebSocket. Кожен чат (груповий чи особистий) має власний канал, і всі повідомлення передаються у реальному часі без перезавантаження сторінки. Коли користувач відкриває чат, на клієнті створюється WebSocket-з'єднання з сервером, і всі нові повідомлення одразу з'являються у вікні чату.
+WebSocket is used to provide instant messaging in chats. Each chat (group or private) has its own channel, and all messages are transmitted in real time without reloading the page. When a user opens a chat, a WebSocket connection to the server is created on the client, and all new messages immediately appear in the chat window.
 
-**Файл з логікою:**  
-`chat_app/consumers.py`  
-`chat_app/static/chat_app/chat.js`  
-**Гіф-демонстрація:**  
-![Чат у реальному часі](github_storage/chat.gif)
-
+**Logic file:** 
+`chat_app/consumers.py` 
+`chat_app/static/chat_app/chat.js` 
+**Gif demo:** 
+![Real-time chat](github_storage/chat.gif)
 ---
 
-### Принцип роботи постів
+### How posts work
 
-[⇧ Повернутися до навігації](#навігація)
+[⇧ Back to navigation](#navigation)
 
-Користувачі можуть створювати, редагувати та видаляти пости, додавати до них зображення та теги. Всі дії з постами виконуються через AJAX, що забезпечує швидку взаємодію без перезавантаження сторінки. Пости зберігаються у базі даних, а зображення — у директорії media. Для кожного поста можна додати кілька зображень, а також використовувати стандартні або власні теги для зручної навігації.
+Users can create, edit, and delete posts, and add images and tags to them. All actions with posts are performed via AJAX, which provides fast interaction without reloading the page. Posts are stored in the database, and images are stored in the media directory. You can add multiple images to each post, and use standard or custom tags for easy navigation.
 
-**Файл з логікою:**  
+**Logic file:** 
 `post_app/views.py`, `post_app/forms.py`
-**Гіф-демонстрація:**  
-![Пости](github_storage/add_post.gif)
+**Gif demo:** 
+![Posts](github_storage/add_post.gif)
 
 ---
 
-### Принцип роботи альбомів
+### How albums work
 
-[⇧ Повернутися до навігації](#навігація)
+[⇧ Back to navigation](#navigation)
 
-**Створення альбому:**  
-Користувач може створити новий альбом, вказавши його назву та опис. Після створення альбому можна додавати до нього фотографії. Всі дії виконуються через асинхронні запити, що дозволяє одразу бачити результат без перезавантаження сторінки.
+**Create an album:** 
+The user can create a new album by specifying its name and description. After creating the album, photos can be added to it. All actions are performed through asynchronous requests, which allows you to see the result immediately without reloading the page.
 ```python
 # user_app/views.py
 form_type = request.POST.get("type")
 if form_type == 'album':
-    # Створення нового альбому
+    # Create new album
     theme=request.POST.get("themeSelect")
     tag=Tag.objects.filter(name=theme).first()
     if not tag:
@@ -341,12 +340,12 @@ if form_type == 'album':
     album.created_at = album.created_at.replace(year=int(request.POST.get("year")))
     album.save()
 ```
-**Додавання та перегляд зображень:**  
-До кожного альбому можна додати декілька зображень. Всі фото відображаються у зручному інтерфейсі, де можна переглядати їх у повному розмірі, видаляти або додавати нові. Завантаження зображень відбувається через форми з попереднім переглядом.
+**Adding and viewing images:** 
+You can add multiple images to each album. All photos are displayed in a convenient interface where you can view them in full size, delete or add new ones. Uploading images is done through forms with preview.
 ```python
 # user_app/views.py
 elif form_type == 'images':
-# Додавання зображень до альбому
+# Adding images to an album
 album = Album.objects.get(pk=int(request.POST.get("pk")))
 img_list = []
 for img in request.FILES.getlist('images'):
@@ -354,63 +353,62 @@ for img in request.FILES.getlist('images'):
     album.save()
 album.save()
 ```
-**Файл з логікою:**  
-`user_app/views.py`, `user_app/static/user_app/albums.js`  
-**Гіф-демонстрація:**  
-![Альбоми](github_storage/albums.gif)
-
+**Logic file:** 
+`user_app/views.py`, `user_app/static/user_app/albums.js` 
+**Gif demo:** 
+![Albums](github_storage/albums.gif)
 ---
 
-### Принцип роботи чатів
+### How chats work
 
-[⇧ Повернутися до навігації](#навігація)
+[⇧ Back to navigation](#navigation)
 
-**Відкриття чату:**  
-Користувач може відкрити як особистий, так і груповий чат. При відкритті чату встановлюється WebSocket-з'єднання з сервером, і всі нові повідомлення надходять у реальному часі. Інтерфейс чату оновлюється миттєво для всіх учасників.
+**Opening a chat:** 
+The user can open both a personal and a group chat. When opening a chat, a WebSocket connection is established with the server, and all new messages arrive in real time. The chat interface is updated instantly for all participants.
 
-**Відправка повідомлень:**  
-Повідомлення (текстові та зображення) надсилаються через WebSocket, що забезпечує їх миттєву доставку всім учасникам чату. Для групових чатів реалізовано додавання/видалення учасників, зміну аватара та назви групи.
+**Sending messages:** 
+Messages (text and images) are sent via WebSocket, which ensures their instant delivery to all chat participants. For group chats, adding/removing participants, changing the avatar and group name are implemented.
 
-**Файл з логікою:**  
-`chat_app/views.py`, `chat_app/static/chat_app/chat.js`  
-**Гіф-демонстрація:**  
-![Груповий чат](github_storage/chat.gif)
+**Logic file:** 
+`chat_app/views.py`, `chat_app/static/chat_app/chat.js` 
+**Gif demo:** 
+![Group chat](github_storage/chat.gif)
 
 ---
 
 ### Робота з AJAX
 
-[⇧ Повернутися до навігації](#навігація)
+[⇧ Back to navigation](#navigation)
 
-Більшість дій у застосунку (додавання/редагування постів, зміна аватара, редагування профілю, додавання друзів) виконуються асинхронно через AJAX. Це дозволяє оновлювати лише необхідні частини сторінки, не перезавантажуючи всю сторінку, що значно покращує користувацький досвід.
+Most of the actions in the application (adding/editing posts, changing avatar, editing profile, adding friends) are performed asynchronously via AJAX. This allows you to update only the necessary parts of the page without reloading the entire page, which significantly improves the user experience.
 
-**Файл з логікою:**  
-`user_app/static/user_app/personal.js`  
-**Гіф-демонстрація:**  
-![AJAX взаємодія](github_storage/edit_info.gif)
+**Logic file:** 
+`user_app/static/user_app/personal.js` 
+**Gif demo:** 
+![AJAX interaction](github_storage/edit_info.gif)
 
 ---
 
-### Принцип роботи реєстрації та авторизації
+### How registration and authorization work
 
-[⇧ Повернутися до навігації](#навігація)
+[⇧ Return to navigation](#navigation)
 
-Реєстрація та авторизація реалізовані через стандартні Django-форми з додатковими перевірками. Після реєстрації користувач отримує листа для підтвердження email (якщо налаштовано), а при вході — проходить перевірку даних. Для безпеки використовується CSRF-захист, а всі паролі зберігаються у хешованому вигляді.
+Registration and authorization are implemented through standard Django forms with additional checks. After registration, the user receives an email to confirm their email (if configured), and when logging in, they undergo data verification. CSRF protection is used for security, and all passwords are stored in hashed form.
 
-**Файл з логікою:**  
+**Logic file:** 
 `user_app/views.py`
-**Гіф-демонстрація:**  
-![Реєстрація та Авторизація](github_storage/registration.gif)
+**Gif demo:** 
+![Registration and Authorization](github_storage/registration.gif)
 
 ---
 
-### Принцип роботи додатку друзів
+### How the Friends App Works
 
-[⇧ Повернутися до навігації](#навігація)
+[⇧ Back to navigation](#navigation)
 
-**Додавання та підтвердження друзів:**  
-Користувачі можуть надсилати запити на додавання у друзі, підтверджувати чи відхиляти їх. Всі дії виконуються асинхронно, що забезпечує швидку реакцію інтерфейсу. Після підтвердження користувачі з'являються у списку друзів.
-**Файли з логікою:**  
+**Adding and confirming friends:** 
+Users can send friend requests, confirm or reject them. All actions are performed asynchronously, which ensures a fast interface response. After confirmation, users appear in the friends list.
+**Logic files:**
 ```python
 # main_app/views.py
 if request.method == 'POST':
@@ -439,13 +437,13 @@ if request.method == 'POST':
 `main_app/views.py`, 
 ```js
 // main_app/static/main_app/friends.js
-// Для каждой кнопки "Подтвердити", "Додати" или "Повідомлення" добавляем обработчик
+// For each "Confirm", "Add" or "Notification" button, we add a handler
 let buttons = document.querySelectorAll(".btn-confirm")
 for (let button of buttons){
     button.addEventListener("click", () => {
         let pk = button.value
         let type;
-        // Определяем тип действия по тексту кнопки и извлекаем pk пользователя
+        // We determine the type of action by the text of the button and extract the user's pk
         if (pk.split('Підтвердити').length>1){
             type = 'confirm'
             pk = pk.split('Підтвердити')[1]
@@ -456,19 +454,19 @@ for (let button of buttons){
 
         }else if (pk.split('Повідомлення').length>1){
             pk = pk.split('Повідомлення')[1]
-            // Переход к чату
+            // Go to chat
             window.location.href = document.querySelector('#chatUrl').value
         }
-        // Находим карточку друга и контейнер для всех друзей
+        // We find the friend's card and the container for all friends
         let card = document.querySelector('#card'+pk)
         let allFriends = document.querySelector('.allFriends')
-        // Удаляем карточку из текущего списка
+        // Remove the card from the current list
         card.remove()
-        // Если подтверждение — добавляем карточку в список друзей
+        // If confirmation — we add the card to the list of friends
         if (type=='confirm'){
             allFriends.append(card)
         }
-        // Отправляем POST-запрос на сервер для обработки действия (добавить/подтвердить)
+        // Send a POST request to the server to process the action (add/confirm)
         fetch(window.location.href, {
             method: 'POST',
             headers: {
@@ -485,37 +483,37 @@ for (let button of buttons){
 }
 ```
   
-**Гіф-демонстрація:**  
-![Друзі](github_storage/friends_account.gif)
-**Перегляд сторінки друга:**  
-У спеціальному розділі можна переглянути профіль друга, його пости, статистику, а також написати йому повідомлення або видалити зі списку. Перехід на сторінку друга здійснюється одним кліком по картці друга.
-**Файл з логікою:**  
+**Gif demo:** 
+![Friends](github_storage/friends_account.gif)
+**Viewing a friend's page:** 
+In a special section, you can view a friend's profile, their posts, statistics, and also write them a message or remove them from the list. You can go to a friend's page with one click on the friend's card.
+**Logic file:**
 ```js
 // main_app/static/main_app/friends.js
 for (let card of document.querySelectorAll('.friend-card')){
     card.addEventListener("click",(event)=>{
-        // Если клик не по кнопкам "Подтвердить" или "Удалить", переходим на страницу друга
+        // If the click is not on the "Confirm" or "Delete" buttons, go to the friend's page
         if (event.target != card.querySelector('.btn-confirm') && event.target != card.querySelector('.btn-delete')){
             window.location.href = card.querySelector('input').value
         }
     })  
 }
 ```
-**Гіф-демонстрація:**  
+**Gif demo:** 
 
-![Перегляд профілю друга](github_storage/friend_profile.gif)
+![View friend profile](github_storage/friend_profile.gif)
 
 ---
-## Висновок
+## Conclusion
 
-[⇧ Повернутися до навігації](#навігація)
+[⇧ Return to navigation](#navigation)
 
-Месенджер, який ми створили, є сучасним веб-застосунком, що поєднує класичний функціонал соціальних платформ із можливостями новітніх веб-технологій. Завдяки використанню Django, JavaScript, WebSocket та сучасних підходів до фронтенду, проєкт демонструє, як можна реалізувати повноцінний багатокористувацький сервіс для спілкування, обміну контентом, створення груп, постів та альбомів.
+The messenger we created is a modern web application that combines the classic functionality of social platforms with the capabilities of the latest web technologies. Using Django, JavaScript, WebSocket, and modern frontend approaches, the project demonstrates how to implement a full-fledged multi-user service for communication, content exchange, and creation of groups, posts, and albums.
 
-Особливістю цього месенджера є інтеграція реального часу через WebSocket, що дозволяє користувачам отримувати повідомлення миттєво, без перезавантаження сторінки. Це робить спілкування максимально зручним і наближеним до досвіду використання професійних месенджерів. Окремо варто відзначити реалізацію гнучкої системи постів, тегів, альбомів, а також можливість керування профілем, що робить застосунок універсальним для різних категорій користувачів.
+A feature of this messenger is real-time integration via WebSocket, which allows users to receive messages instantly, without reloading the page. This makes communication as convenient as possible and close to the experience of using professional messengers. It is worth noting the implementation of a flexible system of posts, tags, albums, as well as the ability to manage a profile, which makes the application universal for different categories of users.
 
-Проєкт став чудовим прикладом командної роботи, де кожен учасник зміг проявити свої сильні сторони: від архітектури бекенду та налаштування серверної частини до якісної верстки, і інтеграції сучасних бібліотек. Ми отримали цінний досвід у плануванні, розподілі задач, тестуванні, роботі з git та документацією.
+The project was a great example of teamwork, where each participant was able to show their strengths: from backend architecture and server-side configuration to high-quality layout and integration of modern libraries. We gained valuable experience in planning, task distribution, testing, working with git, and documentation.
 
-Месенджер підтверджує, що навіть невелика команда може створити складний, багатофункціональний продукт, використовуючи відкриті технології та сучасні підходи до розробки. Цей проєкт — не лише навчальний кейс, а й реальний приклад того, як можна організувати ефективну взаємодію між користувачами, забезпечити безпеку, масштабованість і зручність інтерфейсу.
+Messenger proves that even a small team can create a complex, multi-functional product using open technologies and modern development approaches. This project is not only a learning case, but also a real-life example of how to organize effective interaction between users, ensure security, scalability, and user-friendliness of the interface.
 
-Завдяки цьому досвіду ми переконалися у власних силах, навчилися вирішувати нетривіальні завдання та впроваджувати сучасні рішення у веб-розробці. Месенджер став для нас не просто черговою роботою, а справжнім досягненням, яке демонструє наші навички, вміння працювати в команді та бажання розвиватися у сфері IT.
+Thanks to this experience, we became confident in our own abilities, learned to solve non-trivial tasks and implement modern solutions in web development. Messenger became for us not just another job, but a real achievement that demonstrates our skills, ability to work in a team and desire to develop in the IT field.
